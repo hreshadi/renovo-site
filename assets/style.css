@@ -96,6 +96,15 @@ a{color:inherit}
 .btn-primary:hover{
   filter: brightness(1.08);
 }
+.btn-secondary{
+  background: rgba(255,255,255,.18);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.28);
+}
+.btn-secondary:hover{
+  background: rgba(255,255,255,.26);
+  border-color: rgba(255,255,255,.40);
+}
 
 /* Ghost: white / light with visible border */
 .btn-ghost{
@@ -211,6 +220,7 @@ main{padding:44px 0}
 /* subtle animation */
 .reveal{opacity:0; transform:translateY(10px); transition: opacity .5s ease, transform .5s ease}
 .reveal.show{opacity:1; transform:translateY(0)}
+
 
 
 
