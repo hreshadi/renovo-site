@@ -81,8 +81,16 @@ a{color:inherit}
 }
 .btn-primary{background:#fff;color:var(--bg)}
 .btn-primary:hover{filter:brightness(.95)}
-.btn-ghost{border:1px solid rgba(255,255,255,.35); color:#fff}
-.btn-ghost:hover{background:rgba(255,255,255,.08)}
+.btn-ghost{
+  border:1px solid rgba(11,28,45,.35);
+  color:var(--bg);
+  background: rgba(255,255,255,.65);
+}
+.btn-ghost:hover{
+  background:#fff;
+  border-color: rgba(11,28,45,.55);
+}
+
 
 main{padding:44px 0}
 .section{padding:26px 0}
@@ -109,11 +117,12 @@ main{padding:44px 0}
 }
 .section.cta{
   background:#fff;
-  border:1px solid rgba(20,30,50,.10);
+  border:1px solid rgba(20,30,50,.12);
   border-radius:18px;
   padding:26px;
-  box-shadow: 0 12px 30px rgba(0,0,0,.06);
+  box-shadow: 0 14px 34px rgba(0,0,0,.08);
 }
+
 
 
 .kpi{
@@ -184,6 +193,7 @@ main{padding:44px 0}
 /* subtle animation */
 .reveal{opacity:0; transform:translateY(10px); transition: opacity .5s ease, transform .5s ease}
 .reveal.show{opacity:1; transform:translateY(0)}
+
 
 
 
