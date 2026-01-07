@@ -59,10 +59,11 @@ a{color:inherit}
 .hero-bg{
   background:
     linear-gradient(rgba(11,28,45,.78), rgba(11,28,45,.78)),
-    url(../images/home/home-warehouse.jpg");
+    url("../images/home/home-warehouse.jpg");
   background-size: cover;
   background-position: center;
 }
+
 
 .cta-row{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px}
 .btn{
@@ -170,3 +171,4 @@ main{padding:44px 0}
 /* subtle animation */
 .reveal{opacity:0; transform:translateY(10px); transition: opacity .5s ease, transform .5s ease}
 .reveal.show{opacity:1; transform:translateY(0)}
+
