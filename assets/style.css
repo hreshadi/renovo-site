@@ -150,6 +150,58 @@ main{padding:44px 0}
   box-shadow: 0 14px 34px rgba(0,0,0,.08);
 }
 
+:root{
+  --brand: #0b1c2d; /* your dark blue */
+}
+
+/* Default on LIGHT backgrounds */
+.btn-primary{
+  background: var(--brand);
+  color:#fff;
+  border:1px solid rgba(11,28,45,.85);
+}
+.btn-primary:hover{ filter:brightness(1.08); }
+
+.btn-secondary{
+  background:#fff;
+  color: var(--brand);
+  border:1px solid rgba(11,28,45,.30);
+}
+.btn-secondary:hover{
+  background:#f7f8fb;
+  border-color: rgba(11,28,45,.45);
+}
+
+.btn-ghost{
+  background: transparent;
+  color: var(--brand);
+  border:1px solid rgba(11,28,45,.30);
+}
+.btn-ghost:hover{
+  background: rgba(11,28,45,.06);
+  border-color: rgba(11,28,45,.45);
+}
+
+/* HERO (dark background) overrides */
+.hero .btn-primary{
+  background:#fff;
+  color: var(--brand);
+  border-color: rgba(255,255,255,.70);
+}
+.hero .btn-primary:hover{ filter:brightness(.95); }
+
+.hero .btn-secondary,
+.hero .btn-ghost{
+  background: rgba(11,28,45,.55);
+  color:#fff;
+  border-color: rgba(255,255,255,.25);
+}
+.hero .btn-secondary:hover,
+.hero .btn-ghost:hover{
+  background: rgba(11,28,45,.72);
+  border-color: rgba(255,255,255,.38);
+}
+
 
 
 .kpi{
@@ -220,6 +272,7 @@ main{padding:44px 0}
 /* subtle animation */
 .reveal{opacity:0; transform:translateY(10px); transition: opacity .5s ease, transform .5s ease}
 .reveal.show{opacity:1; transform:translateY(0)}
+
 
 
 
