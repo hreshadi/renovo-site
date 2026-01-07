@@ -71,25 +71,40 @@ a{color:inherit}
 
 
 .cta-row{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px}
+/* Buttons (consistent across dark + light backgrounds) */
 .btn{
   display:inline-block;
   padding:11px 14px;
   border-radius:12px;
   text-decoration:none;
-  font-weight:600;
+  font-weight:700;
   font-size:14px;
+  line-height:1;
+  border:1px solid transparent;
+  transition: filter .15s ease, background .15s ease, border-color .15s ease;
 }
-.btn-primary{background:#fff;color:var(--bg)}
-.btn-primary:hover{filter:brightness(.95)}
+
+/* Primary: solid brand color */
+.btn-primary{
+  background: var(--bg);
+  color:#fff;
+  border-color: rgba(11,28,45,.85);
+}
+.btn-primary:hover{
+  filter: brightness(1.08);
+}
+
+/* Ghost: white / light with visible border */
 .btn-ghost{
-  border:1px solid rgba(11,28,45,.35);
-  color:var(--bg);
-  background: rgba(255,255,255,.65);
+  background: rgba(255,255,255,.85);
+  color: var(--bg);
+  border-color: rgba(11,28,45,.35);
 }
 .btn-ghost:hover{
   background:#fff;
   border-color: rgba(11,28,45,.55);
 }
+
 
 
 main{padding:44px 0}
@@ -193,6 +208,7 @@ main{padding:44px 0}
 /* subtle animation */
 .reveal{opacity:0; transform:translateY(10px); transition: opacity .5s ease, transform .5s ease}
 .reveal.show{opacity:1; transform:translateY(0)}
+
 
 
 
