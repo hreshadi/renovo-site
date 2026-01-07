@@ -4,108 +4,128 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Renovo Design Build | Industrial & Warehouse Engineering</title>
-  <meta name="description" content="Engineering & design-build for industrial and warehouse facilities across Canada." />
-  <style>
-    body{font-family:system-ui,Arial;margin:0;line-height:1.55;color:#111}
-    header{background:#0b1c2d;color:#fff;padding:34px 18px}
-    nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:18px}
-    nav img{height:54px}
-    nav a{color:#fff;text-decoration:none;margin-left:14px;font-size:14px}
-    .hero{max-width:1100px;margin:28px auto 0;padding:0 18px 18px}
-    h1{margin:0 0 10px;font-size:34px}
-    .cta{display:inline-block;margin-top:14px;background:#fff;color:#0b1c2d;text-decoration:none;padding:10px 14px;border-radius:10px}
-    main{max-width:1100px;margin:auto;padding:44px 18px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
-    .card{border:1px solid #ddd;border-radius:14px;padding:16px}
-    .note{font-size:13px;opacity:.85}
-    footer{border-top:1px solid #eee;padding:20px;text-align:center;font-size:13px}
-  </style>
+  <meta name="description" content="Engineering & design-build services for industrial and warehouse facilities across Canada." />
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-<header>
-  <nav>
-    <img src="renovo-logo.png" alt="Renovo Design Build logo" />
-    <div>
-      <a href="#services">Services</a>
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/renovo-logo.png" alt="Renovo Design Build logo">
+      </a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="about.html#contact">Contact</a>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <div class="hero">
-    <h1>Engineering & Design-Build for Industrial and Warehouse Facilities</h1>
-    <p>Practical, code-compliant solutions across Canada — from engineering and permitting to coordinated build and installation.</p>
-    <a class="cta" href="#contact">Request a site review</a>
-    <p class="note">Electrical and plumbing services are provided through qualified and licensed partner firms.</p>
-  </div>
-</header>
+  <section class=""hero hero-bg"">
+    <div class="container">
+      <h1>Engineering & Design-Build for Industrial, Warehouse & Office Facility Areas</h1>
+      <p>Practical, code-compliant solutions — from engineering and permitting to coordinated build and installation.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="about.html#contact">Request a site review</a>
+        <a class="btn btn-ghost" href="services.html">View services</a>
+      </div>
+      <p class="sub">Electrical and plumbing services are provided through qualified and licensed partner firms.</p>
+    </div>
+  </section>
 
-<main>
-  <section id="services">
-    <h2>Services</h2>
+  <main class="container">
+  <section class="section reveal">
+    <h2>What we do</h2>
+
     <div class="grid">
       <div class="card">
         <h3>Engineering & Permitting</h3>
         <ul>
-          <li>Structural engineering for industrial facilities</li>
-          <li>Equipment load reviews and site assessments</li>
-          <li>Permit drawings and authority coordination</li>
-          <li>Conveyor and equipment support structures</li>
+          <li>Structural engineering and site assessments</li>
+          <li>Equipment load reviews and documentation</li>
+          <li>Permit drawings and coordination</li>
+          <li>Conveyor & equipment support structures</li>
           <li>Foundations and equipment pads</li>
         </ul>
       </div>
+
       <div class="card">
         <h3>Industrial Structures</h3>
         <ul>
-          <li>Pallet racking systems</li>
-          <li>Mezzanines and work platforms</li>
-          <li>Catwalks, stairs, and guardrails</li>
+          <li>Pallet racking & storage structures</li>
+          <li>Mezzanines, platforms, catwalks</li>
+          <li>Stairs, guardrails, safety upgrades</li>
           <li>Custom steel support frames</li>
         </ul>
       </div>
+
       <div class="card">
         <h3>Design-Build & Installation</h3>
         <ul>
-          <li>Racking and mezzanine installation</li>
+          <li>Racking/mezzanine/platform install</li>
           <li>Conveyor installation support</li>
-          <li>Air compressor and utilities coordination</li>
+          <li>Air compressor & utility coordination</li>
           <li>Equipment placement and anchoring</li>
-          <li>Foundation and concrete coordination</li>
+          <li>Concrete/foundation coordination</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Office & Facility Improvements</h3>
+        <ul>
+          <li>Office areas inside warehouses and industrial buildings</li>
+          <li>Mezzanine office integration and structural coordination</li>
+          <li>Partitions and layout coordination (as required)</li>
+          <li>Service/utility rooms</li>
         </ul>
       </div>
     </div>
-  </section>
 
-  <section id="work">
-    <h2>Typical Work</h2>
-    <div class="grid">
-      <div class="card">Mezzanine and platform design with permit packages</div>
-      <div class="card">Racking capacity reviews and documentation</div>
-      <div class="card">Conveyor support frames and field verification</div>
-      <div class="card">Equipment foundations and anchorage details</div>
-      <div class="card">Installation coordination and site supervision</div>
+    <div class="kpi">
+      <div class="pill">Canada-wide service</div>
+      <div class="pill">Engineering-led delivery</div>
+      <div class="pill">Partnered MEP: electrical & plumbing</div>
     </div>
   </section>
 
-  <section id="about">
-    <h2>About</h2>
-    <p>Renovo Design Build delivers engineering-driven solutions for industrial and warehouse environments across Canada. We combine engineering rigor with constructability and field coordination to reduce risk and deliver dependable results.</p>
+  <section class="section reveal">
+    <h2>How we work</h2>
+    <p>Clear steps, fewer surprises, and build-ready outputs.</p>
+    <div class="timeline">
+      <div class="step"><strong>1) Assess</strong> — Site review, measurements, constraints, and goals.</div>
+      <div class="step"><strong>2) Design</strong> — Engineering analysis and constructable design details.</div>
+      <div class="step"><strong>3) Permit</strong> — Permit drawings and authority coordination as required.</div>
+      <div class="step"><strong>4) Build</strong> — Installation coordination and on-site support to deliver.</div>
+    </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p><strong>Director:</strong> Hossein Reshadi</p>
-    <p><strong>Phone:</strong> 647-995-4646</p>
-    <p><strong>Email:</strong> hossein.reshadi@renovodesignbuild.org</p>
-    <p class="note">Serving industrial and warehouse projects Canada-wide.</p>
+  <section class="section reveal">
+    <h2>Typical work</h2>
+    <div class="grid">
+      <div class="card"><h3>Mezzanine / platform packages</h3><p class="notice">Permit-ready drawings, loads, details.</p></div>
+      <div class="card"><h3>Racking reviews</h3><p class="notice">Capacity checks, documentation, compliance support.</p></div>
+      <div class="card"><h3>Conveyor supports</h3><p class="notice">Safe frames, anchoring details, field verification.</p></div>
+      <div class="card"><h3>Foundations / equipment pads</h3><p class="notice">Concrete coordination + anchorage detailing.</p></div>
+    </div>
+  </section>
+
+  <section class="section reveal">
+    <h2>Ready to talk?</h2>
+    <p>Share your site location, timeline, and what you need. We’ll respond with next steps.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="about.html#contact">Request a site review</a>
+      <a class="btn btn-ghost" href="projects.html">See typical scopes</a>
+    </div>
   </section>
 </main>
 
-<footer>
-  © <span id="y"></span> Renovo Design Build. All rights reserved.
-</footer>
 
-<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+  <footer class="footer">
+    <div class="container">© <span id="year"></span> Renovo Design Build. All rights reserved.</div>
+  </footer>
+
+  <script src="assets/app.js"></script>
 </body>
 </html>
