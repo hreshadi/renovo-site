@@ -193,6 +193,7 @@ main{padding:44px 0}
 
 /* Force 4 columns for the "What we do" row */
 .grid-4{ grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.break-anywhere{ overflow-wrap:anywhere; word-break:break-word; }
 
 /* Laptop */
 @media (max-width: 1100px){
@@ -346,6 +347,7 @@ main{padding:44px 0}
     word-break: break-word;
   }
 }
+
 
 
 
