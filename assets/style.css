@@ -340,6 +340,14 @@ main{padding:44px 0}
     font-size: 16px;
     line-height: 1.45;
   }
+/* Force long emails/links to wrap on mobile */
+.contact-box a{
+  display:inline-block;
+  max-width:100%;
+  white-space: normal;
+  overflow-wrap:anywhere;
+  word-break: break-word;
+}
 
   /* Prevent email overflow */
   .contact-box a{
@@ -347,6 +355,7 @@ main{padding:44px 0}
     word-break: break-word;
   }
 }
+
 
 
 
