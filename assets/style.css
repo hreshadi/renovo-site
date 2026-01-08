@@ -284,6 +284,69 @@ main{padding:44px 0}
 
 
 
+/* ---------- Mobile layout fixes ---------- */
+@media (max-width: 720px){
+
+  /* Give the page some breathing room */
+  .container{
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* Header: stack logo + nav nicely */
+  .header-inner{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  /* Logo size on mobile */
+  .brand img{
+    max-height: 44px;   /* adjust 38–52 */
+    width: auto;
+    display:block;
+  }
+
+  /* Nav wraps cleanly */
+  .nav{
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .nav a{
+    padding: 8px 12px;
+    border-radius: 12px;
+    font-size: 15px;
+  }
+
+  /* Hero text sizing */
+  .hero h1{ font-size: 28px; line-height: 1.15; }
+  .hero p{ font-size: 16px; }
+  .hero .sub{ font-size: 14px; }
+
+  /* Contact section: reduce white space */
+  .section.cta{
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  /* Contact box: keep it compact + readable */
+  .contact-box{
+    padding: 14px;
+  }
+  .contact-box div{
+    font-size: 16px;
+    line-height: 1.45;
+  }
+
+  /* Prevent email overflow */
+  .contact-box a{
+    overflow-wrap: anywhere;   /* key fix */
+    word-break: break-word;
+  }
+}
+
 
 
 
