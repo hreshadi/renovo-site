@@ -122,6 +122,17 @@ a{color:inherit}
   border-radius:16px;
   border:1px solid rgba(20,30,50,.12);
 }
+/* Make card headings equal height so bullets align */
+.card h3{
+  min-height: 52px;     /* adjust: try 48–60 */
+  display:flex;
+  align-items:flex-start;
+  margin: 0 0 10px;
+}
+.card ul{
+  margin: 0;
+  padding-left: 18px;
+}
 
 @media (max-width: 640px){
   .hero-img{ height:200px; }
@@ -270,6 +281,7 @@ main{padding:44px 0}
 /* subtle animation */
 .reveal{opacity:0; transform:translateY(10px); transition: opacity .5s ease, transform .5s ease}
 .reveal.show{opacity:1; transform:translateY(0)}
+
 
 
 
