@@ -204,17 +204,24 @@ main{padding:44px 0}
 }
 .hero .btn-primary:hover{ filter:brightness(.95); }
 
-.hero .btn-secondary,
+/* HERO: secondary = solid white */
+.hero .btn-secondary{
+  background:#fff;
+  color: var(--brand);
+  border-color: rgba(255,255,255,.70);
+}
+.hero .btn-secondary:hover{ filter:brightness(.95); }
+
+/* HERO: ghost = white outline (still “white” look) */
 .hero .btn-ghost{
-  background: rgba(11,28,45,.55);
+  background: transparent;
   color:#fff;
-  border-color: rgba(255,255,255,.25);
+  border-color: rgba(255,255,255,.70);
 }
-.hero .btn-secondary:hover,
 .hero .btn-ghost:hover{
-  background: rgba(11,28,45,.72);
-  border-color: rgba(255,255,255,.38);
+  background: rgba(255,255,255,.12);
 }
+
 
 
 
@@ -286,6 +293,7 @@ main{padding:44px 0}
 /* subtle animation */
 .reveal{opacity:0; transform:translateY(10px); transition: opacity .5s ease, transform .5s ease}
 .reveal.show{opacity:1; transform:translateY(0)}
+
 
 
 
