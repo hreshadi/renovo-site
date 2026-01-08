@@ -18,6 +18,13 @@ body{
   line-height:1.6;
   background:#f1f3f7;
 }
+.break-anywhere{
+  display:inline-block;
+  max-width:100%;
+  white-space: normal;
+  overflow-wrap:anywhere;
+  word-break: break-word;
+}
 
 a{color:inherit}
 .container{max-width:1100px;margin:0 auto;padding:0 18px}
@@ -355,6 +362,7 @@ main{padding:44px 0}
     word-break: break-word;
   }
 }
+
 
 
 
