@@ -192,6 +192,15 @@ main{padding:44px 0}
 @media (max-width: 640px){
   .grid-4{ grid-template-columns: 1fr; }
 }
+.project-photo{
+  width:100%;
+  height:220px;              /* change to 200–260 if you want */
+  object-fit:cover;
+  object-position:center;
+  border-radius:16px;
+  border:1px solid rgba(20,30,50,.12);
+  box-shadow: 0 10px 26px rgba(0,0,0,.08);
+}
 
 .kpi{
   display:flex; gap:14px; flex-wrap:wrap;
@@ -261,6 +270,7 @@ main{padding:44px 0}
 /* subtle animation */
 .reveal{opacity:0; transform:translateY(10px); transition: opacity .5s ease, transform .5s ease}
 .reveal.show{opacity:1; transform:translateY(0)}
+
 
 
 
