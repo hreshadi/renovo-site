@@ -115,6 +115,17 @@ a{color:inherit}
   background: rgba(11,28,45,.06);
   border-color: rgba(11,28,45,.45);
 }
+.hero-img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  border-radius:16px;
+  border:1px solid rgba(20,30,50,.12);
+}
+
+@media (max-width: 640px){
+  .hero-img{ height:200px; }
+}
 
 /* HERO overrides (dark background) */
 /* You asked: primary + secondary both white in hero */
@@ -250,6 +261,7 @@ main{padding:44px 0}
 /* subtle animation */
 .reveal{opacity:0; transform:translateY(10px); transition: opacity .5s ease, transform .5s ease}
 .reveal.show{opacity:1; transform:translateY(0)}
+
 
 
 
