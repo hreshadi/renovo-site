@@ -1,5 +1,6 @@
 :root{
-  --bg:#0b1c2d;
+  --brand:#0b1c2d;          /* main brand color */
+  --bg:#0b1c2d;             /* used for hero backgrounds etc. */
   --text:#0b1220;
   --muted:#5a6475;
   --card:#ffffff;
@@ -46,12 +47,13 @@ a{color:inherit}
 .nav a:hover{background:rgba(255,255,255,.08)}
 .nav a.active{background:rgba(255,255,255,.14)}
 
+/* HERO */
 .hero{
   background: radial-gradient(1200px 600px at 20% 10%, rgba(255,255,255,.18), transparent 55%),
               radial-gradient(900px 500px at 90% 0%, rgba(255,255,255,.10), transparent 60%),
               var(--bg);
   color:#fff;
-  padding:54px 0 44px;
+  padding:54px 0 64px; /* merged your padding + padding-bottom */
 }
 .hero h1{
   margin:0 0 10px;
@@ -61,6 +63,7 @@ a{color:inherit}
 }
 .hero p{margin:0 0 18px;max-width:780px;opacity:.92}
 .hero .sub{font-size:14px;opacity:.85;max-width:880px}
+
 .hero-bg{
   background:
     linear-gradient(rgba(11,28,45,.80), rgba(11,28,45,.80)),
@@ -70,11 +73,9 @@ a{color:inherit}
   background-repeat: no-repeat;
 }
 
-.hero{
-  padding-bottom: 64px; /* gives space so the image feels complete */
-}
 .cta-row{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px}
-/* Buttons (consistent across dark + light backgrounds) */
+
+/* Buttons (single source of truth) */
 .btn{
   display:inline-block;
   padding:11px 14px;
@@ -84,40 +85,58 @@ a{color:inherit}
   font-size:14px;
   line-height:1;
   border:1px solid transparent;
-  transition: filter .15s ease, background .15s ease, border-color .15s ease;
+  transition: filter .15s ease, background .15s ease, border-color .15s ease, color .15s ease;
 }
 
-/* Primary: solid brand color */
+/* Default on LIGHT backgrounds */
 .btn-primary{
-  background: var(--bg);
+  background: var(--brand);
   color:#fff;
-  border-color: rgba(11,28,45,.85);
+  border:1px solid rgba(11,28,45,.85);
 }
-.btn-primary:hover{
-  filter: brightness(1.08);
-}
+.btn-primary:hover{ filter:brightness(1.08); }
+
 .btn-secondary{
-  background: rgba(255,255,255,.18);
-  color: #fff;
-  border: 1px solid rgba(255,255,255,.28);
+  background:#fff;
+  color: var(--brand);
+  border:1px solid rgba(11,28,45,.30);
 }
 .btn-secondary:hover{
-  background: rgba(255,255,255,.26);
-  border-color: rgba(255,255,255,.40);
+  background:#f7f8fb;
+  border-color: rgba(11,28,45,.45);
 }
 
-/* Ghost: white / light with visible border */
 .btn-ghost{
-  background: rgba(255,255,255,.85);
-  color: var(--bg);
-  border-color: rgba(11,28,45,.35);
+  background: transparent;
+  color: var(--brand);
+  border:1px solid rgba(11,28,45,.30);
 }
 .btn-ghost:hover{
-  background:#fff;
-  border-color: rgba(11,28,45,.55);
+  background: rgba(11,28,45,.06);
+  border-color: rgba(11,28,45,.45);
 }
 
+/* HERO overrides (dark background) */
+/* You asked: primary + secondary both white in hero */
+.hero .btn-primary,
+.hero .btn-secondary{
+  background:#fff;
+  color: var(--brand);
+  border-color: rgba(255,255,255,.70);
+}
+.hero .btn-primary:hover,
+.hero .btn-secondary:hover{ filter:brightness(.95); }
 
+/* Ghost stays outline in hero */
+.hero .btn-ghost{
+  background: transparent;
+  color:#fff;
+  border-color: rgba(255,255,255,.70);
+}
+.hero .btn-ghost:hover{
+  background: rgba(255,255,255,.12);
+  border-color: rgba(255,255,255,.90);
+}
 
 main{padding:44px 0}
 .section{padding:26px 0}
@@ -149,10 +168,9 @@ main{padding:44px 0}
   padding:26px;
   box-shadow: 0 14px 34px rgba(0,0,0,.08);
 }
+
 /* Force 4 columns for the "What we do" row */
-.grid-4{
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
+.grid-4{ grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
 /* Laptop */
 @media (max-width: 1100px){
@@ -163,67 +181,6 @@ main{padding:44px 0}
 @media (max-width: 640px){
   .grid-4{ grid-template-columns: 1fr; }
 }
-
-:root{
-  --brand: #0b1c2d; /* your dark blue */
-}
-
-/* Default on LIGHT backgrounds */
-.btn-primary{
-  background: var(--brand);
-  color:#fff;
-  border:1px solid rgba(11,28,45,.85);
-}
-.btn-primary:hover{ filter:brightness(1.08); }
-
-.btn-secondary{
-  background:#fff;
-  color: var(--brand);
-  border:1px solid rgba(11,28,45,.30);
-}
-.btn-secondary:hover{
-  background:#f7f8fb;
-  border-color: rgba(11,28,45,.45);
-}
-
-.btn-ghost{
-  background: transparent;
-  color: var(--brand);
-  border:1px solid rgba(11,28,45,.30);
-}
-.btn-ghost:hover{
-  background: rgba(11,28,45,.06);
-  border-color: rgba(11,28,45,.45);
-}
-
-/* HERO (dark background) overrides */
-.hero .btn-primary{
-  background:#fff;
-  color: var(--brand);
-  border-color: rgba(255,255,255,.70);
-}
-.hero .btn-primary:hover{ filter:brightness(.95); }
-
-/* HERO: secondary = solid white */
-.hero .btn-secondary{
-  background:#fff;
-  color: var(--brand);
-  border-color: rgba(255,255,255,.70);
-}
-.hero .btn-secondary:hover{ filter:brightness(.95); }
-
-/* HERO: ghost = white outline (still “white” look) */
-.hero .btn-ghost{
-  background: transparent;
-  color:#fff;
-  border-color: rgba(255,255,255,.70);
-}
-.hero .btn-ghost:hover{
-  background: rgba(255,255,255,.12);
-}
-
-
-
 
 .kpi{
   display:flex; gap:14px; flex-wrap:wrap;
@@ -293,6 +250,8 @@ main{padding:44px 0}
 /* subtle animation */
 .reveal{opacity:0; transform:translateY(10px); transition: opacity .5s ease, transform .5s ease}
 .reveal.show{opacity:1; transform:translateY(0)}
+
+
 
 
 
